@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            const name = prompt('Digite seu nome:');
+            var height = parseInt(prompt('Digite sua altura(centimentos):'));
+            var weight = parseFloat(prompt('Digite seu peso:'));
+            height /= 100;
+            var pasta = weight / Math.pow(height, 2);
+            var message = null;
+
+            if(pasta < 16){
+                message = 'Baixo peso muito grave';
+            }else if(pasta >= 16 && pasta <= 16.99){
+                message = 'Baixo peso grave';
+            }else if(pasta >= 17 && pasta <= 18.49){
+                message = 'Baixo peso';
+            }else if(pasta >= 18.5 && pasta <= 24.99){
+                message = 'Peso normal';
+            }else if(pasta >= 25 && pasta <= 29.99){
+                message = 'Sobrepeso';
+            }else if(pasta >= 30 && pasta <= 34.99){
+                message = 'Obesidade grau I';
+            }else if(pasta >= 35 && pasta <= 39.99){
+                message = 'Obesidade grau II';
+            }else{
+                message = 'Obesidade grau III';
+            }
+
+            document.write(name+" possui índice de massa corporal igual a "+pasta.toFixed(2)+", sendo classificado como: "+message);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

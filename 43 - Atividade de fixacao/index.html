@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            var lista_frutas = Array()
+
+            lista_frutas[0] = 'Banana'
+            lista_frutas[1] = 'Maça'
+            lista_frutas[2] = 'Morango'
+            lista_frutas[3] = 'Uva'
+
+            for(var x = 0; x < lista_frutas.length; x++){
+                document.write(lista_frutas[x]+'<br/>')
+            }
+
+            var x = y = 1
+            while(x <= 10){
+                document.write('<hr/>Taboada do '+ x +'<hr/>')
+                while(y <= 10){
+                    document.write(x+' * '+ y +' = '+ (x * y++)+'<br/>')
+                }
+                x++;
+                y = 1;
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

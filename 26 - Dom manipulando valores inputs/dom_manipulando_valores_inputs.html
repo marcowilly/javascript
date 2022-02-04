@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function getElement(arg){
+                return document.getElementById(arg)
+            }
+
+            function distribuiCaracter(){
+                var caracter = getElement('entrada').value
+                getElement('entrada').value = ''
+                if(caracter.trim() !== ' '){
+                    switch(caracter){
+                        case '0':
+                        case '1':
+                        case '2':
+                        case '3':
+                        case '4':
+                        case '5':
+                        case '6':
+                        case '7':
+                        case '8':
+                        case '9':
+                            getElement('saida_letras').value += caracter
+                            break;
+                        default:
+                            getElement('saida_numeros').value += caracter
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input 
+            type="text" 
+            placeholder="Digite um caracter aqui"
+            onkeyup="distribuiCaracter()"
+            id="entrada"
+            />
+        
+        <hr/>
+        <span>Letras:</span>
+        <input id='saida_letras' type="text" disabled>
+
+        <span>Números:</span>
+        <input id='saida_numeros'type="text" disabled>
+    </body>
+</html>

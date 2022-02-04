@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            
+            function calcularAreaTerreno(largura, comprimento){
+                //lógica
+                return largura * comprimento;
+            }
+
+            function soma(a, b){
+                return a + b;
+            }
+
+            var largura = parseFloat(prompt('Digite a largura do terreno em metros'));
+            var comprimento = parseFloat(prompt('Digite o comprimento do terreno em metros'));
+            document.write('O terreno possui '+calcularAreaTerreno(largura, comprimento)+' metros quadrados ');
+
+            console.log(soma(7,7));
+            console.log(soma(7,7,9,15)); //Desconsidera os parametros adicionais
+            console.log(soma(7)); //Retorna NaN
+            console.log(soma()) //Retorna NaN
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

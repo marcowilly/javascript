@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            setTimeout(function(){document.write('Teste<br/>')}, 100)
+            var i = 3
+            var interval = setInterval(function(){
+                document.write(i-- +'<br/>')
+                if(i === 0){
+                    clearInterval(interval)
+                }
+            }, 1000)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

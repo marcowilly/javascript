@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function navigate(arg){
+            var navigate = null;
+                switch (arg){
+                    case 'google':
+                        navigate = "https://google.com.br"
+                        break
+                    case 'apple':
+                        navigate = "https://www.apple.com.br"
+                        break 
+                }
+                if(navigate != null){
+                    window.location.href=navigate
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="navigate('google')">Acessar Google</button>
+        <button onclick="navigate('apple')">Acessar Apple</button>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function onClick(){
+                alert('Evento onclick disparado')
+            }
+            function onDblClick(){
+                alert('Evento ondblclick disparado')
+            }
+            function onMouseUp(){
+                alert('Evento onmouseup disparado')
+            }
+            function onMouseOver(){
+                alert('Evento onmouseover disparado')
+            }
+            function onMouseOut(){
+                alert('Evento onmouseout disparado')
+            }
+        </script>
+    </head>
+    <body>
+        <div style="display: flex;">
+            <div onclick="onClick()" style="background: #ccc; height: 150px; width: 150px;">onClick</div>
+            <div ondblclick="onDblClick()" style="background: #777; height: 150px; width: 150px;">onDoubleClick</div>
+            <div onmouseup="onMouseUp()" style="background: #333; height: 150px; width: 150px; color: white;">onMouseUp</div>
+            <div onmouseover="onMouseOver()" style="background: #111; height: 150px; width: 150px; color: white;">onMouseOver</div>
+            <div onmouseout="onMouseOut()" style="background: yellow; height: 150px; width: 150px; color: #111;">onMouseOut</div>
+        </div>
+    </body>
+</html>

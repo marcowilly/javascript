@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+            
+            function getElement(arg){
+                return document.getElementById(arg)
+            }
+
+            function isEmpty(arg) {
+                return (arg === null || arg === "" || typeof arg === "undefined");
+            }
+
+            function adicionarValor(){
+                var element = getElement('entrada');
+                var entrada = element.value
+                if(isEmpty(entrada.trim())){
+                    alert('Informe um valor válido')
+                }else if(objetos.indexOf(entrada) !== -1){
+                    alert('Objeto já foi adicionado')
+                }else{
+                    objetos.push(entrada)
+                    console.log(objetos)
+                    element.value = ''
+                }
+            }
+
+            function ordernarLista(){
+                console.log(objetos.sort())
+            }
+
+        </script>
+    </head>
+    <body>
+        <input id="entrada" type="text" placeholder="Digite aqui"/>
+        <button onclick="adicionarValor()">Adicionar</button>
+        <button onclick="ordernarLista()">Ordenar</button>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+
+            var callbackSucesso = function(num1, num2, op, result){
+                document.write(num1+' '+op+' '+num2+' = '+result)
+            }
+
+            var callbackErro = function(op){
+                document.write('Operação: '+op+' não definida no sistema.<br>Favor tentar novamente.')
+            }
+
+            function calcularValores(num1, num2, op, callbackSucesso, callbackErro){
+                switch(op){
+                    case '-':
+                        callbackSucesso(num1, num2, op, (num1 - num2))
+                        break;
+                    case '+':
+                        callbackSucesso(num1, num2, op, (num1 + num2))
+                        break;
+                    default:
+                        callbackErro(op);
+                }
+            }
+
+            var num1 = parseFloat(prompt('CALCULO ARITIMETICO\nDigite um primeiro:'))
+            var op = prompt('Digite a operação desejada: \nSoma: +\nSubtração: -')
+            var num2 = parseFloat(prompt('Digite o segundo numero: '))
+
+            calcularValores(num1, num2, op, callbackSucesso, callbackErro)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

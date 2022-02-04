@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function onFocus(){
+                console.log('Evento onfocus disparado')
+            }
+
+            function onBlur(){
+                console.log('Evento onblur disparado')
+            }
+
+            function onChange(){
+                console.log('Evento onchange disparado')
+            }
+        </script>
+    </head>
+    <body>
+        <input onfocus="onFocus()" onblur="onBlur()" type="text"/>
+
+        <select onchange="onChange()">
+            <option>Selecione</option>
+            <option value="1">Primeira</option>
+            <option value="2">Segunda</option>
+        </select>
+    </body>
+</html>

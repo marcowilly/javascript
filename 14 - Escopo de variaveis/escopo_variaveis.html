@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 3 escopos: global, funcao, bloco
+            
+            var serie = 'Friends';
+
+            if(true){
+                //Pode sofrer elevação
+                var serie2 = 'Game of Thrones';
+                document.write(serie);
+            }
+
+            //Variavel elevada
+            document.write('<br>'+serie2+'<br>');
+
+            function x(){
+                //Não sofre elevação
+                var serie3 = 'The Walking Dead';
+                document.write(serie);
+                document.write('<br>'+serie2+'<br>');
+            }
+
+            x();
+            
+            //Variavel não elevada
+            document.write('<br>'+serie3+'<br>');
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
